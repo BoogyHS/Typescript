@@ -8,4 +8,4 @@ function sortArr(arr: number[], str: string) {
         return b - a;
     })
 }
-sortArr([14, 7, 17, 6, 8], 'asc');
+console.log(sortArr([14, 7, 17, 6, 8], 'asc'));
