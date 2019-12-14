@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node ./dist/2.ChangeArray.js",
+    "start": "tsc && node ./dist/5.Racing.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
