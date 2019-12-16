@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./dist/2.FamilyMembers.js",
+    "start": "tsc && node ./dist/3.Racing.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
