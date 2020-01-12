@@ -45,11 +45,11 @@ function htmlElValidator(el: HTMLElement | null) {
 // ???? type of event ??????
 function send(ev: Event) {
     const sentUl = document.getElementById('sent');
-   
+
     if (sentUl !== null) {
-        const target = ev.target;
-        if (target!==null) {
-            const newLi:HTMLElement = target.parentNode;
+        const target = ev.target as HTMLButtonElement;
+        if (target !== null) {
+            const newLi = target.parentNode;
             const buttons = Array.from(newLi.getElementsByTagName('button'));
             buttons.forEach(el => {
                 if (el.parentNode !== null) {
