@@ -1,0 +1,16 @@
+"use strict";
+class Data {
+    constructor(method, uri, version, message) {
+        this.method = method;
+        this.uri = uri;
+        this.version = version;
+        this.message = message;
+        this.method = method;
+        this.uri = uri;
+        this.response = undefined;
+        this.fulfilled = false;
+    }
+}
+let myData = new Data('GET', 'http://google.com', 'HTTP/1.1', '');
+console.log(myData);
+//# sourceMappingURL=1.DataClass.js.map
