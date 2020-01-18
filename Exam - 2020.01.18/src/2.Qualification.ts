@@ -1,19 +1,20 @@
 import { QualiData } from './interfaces';
 import { Racers } from './1.Racers';
 
-export class Quali {
+export class Quali extends Racers{
 
     times: QualiData[];
-    static finalPositions: QualiData[];
+    finalPositions: QualiData[];
 
     constructor() {
+        super();
         this.times = [];
-        Quali.finalPositions = [];
+        this.finalPositions = [];
     }
 
     fastestLap(id: number, lapTime: number) {
 
-        const found = Racers.allRacers.find(x => { return x.id === id && x.racingTeam !== undefined });
+        const found = this.allRacers.find(x => { return x.id === id && x.racingTeam !== undefined });
 
         if (!found) {
             throw new Error(`There is no such racer on the grid or has no contract with a team`);
@@ -33,21 +34,12 @@ export class Quali {
     standings() {
         this.times.forEach((el, index) => {
             el.position = index + 1;
-            Quali.finalPositions.push(el);
+            this.finalPositions.push(el);
         });
         const fastestId = this.times[0].id;
-        const fastest = Racers.allRacers.find(x => { return x.id === fastestId });
+        const fastest = this.allRacers.find(x => { return x.id === fastestId });
         if (fastest) {
             return `The fastest driver was ${fastest.firstName} ${fastest.lastName} with car ${fastestId}!`;
         }
     }
 }
-
-export let q = new Quali();
-
-q.fastestLap(22, 1.24);
-q.fastestLap(44, 1.22);
-q.fastestLap(5, 1.25);
-q.fastestLap(33, 1.23);
-
-console.log(q.standings());
