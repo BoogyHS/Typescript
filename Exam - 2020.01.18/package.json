@@ -5,15 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node ./dist/4.TheElemelons.js",
+    "start": "tsc && node ./dist/3.Race.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.7.3"
-  },
-  "dependencies": {
-    "@types/node": "^12.12.21"
   }
 }
